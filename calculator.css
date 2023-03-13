@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.calculator-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calculator-grid-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 400px;
+  height: 400px;
+}
+
+.calculator-grid-content > button {
+  cursor: pointer;
+}
+
+.span-ac {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.span-equal {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
